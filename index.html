@@ -17,7 +17,7 @@
             letter-spacing: 0.02em;
         }
         .student-table th {
-            background-color: #7f1d1d; /* 深紅/褐紅，代表太魯閣織布風格 */
+            background-color: #7f1d1d; /* 深紅/褐紅 */
             color: #fef2f2;
             font-weight: 600;
         }
@@ -44,6 +44,13 @@
             box-shadow: 0 0 10px rgba(220, 38, 38, 0.1);
             padding: 4px 8px;
             border-radius: 4px;
+        }
+        .animate-fadeIn {
+            animation: fadeIn 0.4s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
@@ -115,12 +122,11 @@
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-slate-100">
-                        <!-- 只保留順序 07 黃湘茹 -->
                         <tr class="hover:bg-red-50/50 transition-colors">
                             <td class="px-6 py-4 font-mono font-bold text-red-800 text-lg">07</td>
                             <td class="px-6 py-4 font-bold text-slate-800 editable-name" contenteditable="true">黃湘茹</td>
                             <td class="px-6 py-4 text-slate-600">太魯閣 <span class="text-[10px] text-slate-400 block tracking-tighter italic">Truku</span></td>
-                            <td class="px-6 py-4"><span class="px-3 py-1 bg-amber-100 text-amber-700 rounded-full text-xs font-bold ring-1 ring-amber-200">中高級 / High-Int.</span></td>
+                            <td class="px-6 py-4"><span class="px-3 py-1 bg-amber-100 text-amber-700 rounded-full text-xs font-bold ring-1 ring-amber-200 uppercase">中高級 / High-Int.</span></td>
                             <td class="px-6 py-4 text-sm font-medium text-slate-500">15:16 - 15:27</td>
                         </tr>
                     </tbody>
@@ -130,7 +136,7 @@
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
             <!-- 左側：考題區 / Questions Section -->
-            <div class="space-y-8">
+            <div class="space-y-8 animate-fadeIn">
                 <!-- Task 1: 朗讀考題 -->
                 <div class="bg-white p-3 rounded-3xl shadow-lg overflow-hidden border border-slate-200 ring-1 ring-red-100">
                     <div class="px-5 py-4 border-b flex items-center justify-between bg-red-50/50">
@@ -141,7 +147,7 @@
                                 <span class="text-[10px] font-normal text-slate-500 block uppercase tracking-tighter italic">Reading Task</span>
                             </div>
                         </span>
-                        <span class="text-[11px] font-bold text-red-700 bg-white px-2 py-0.5 rounded border border-red-200">TASK 1</span>
+                        <span class="text-[11px] font-bold text-red-700 bg-white px-2 py-0.5 rounded border border-red-200 uppercase">TASK 1</span>
                     </div>
                     <div class="p-2 bg-slate-50">
                          <img src="https://res.cloudinary.com/dm1ksvptk/image/upload/v1766044057/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2_2025-12-18_154653_c8li84.png" 
@@ -156,11 +162,11 @@
                         <span class="flex items-center gap-2">
                             <i class="fas fa-comment-dots text-red-600 text-xl"></i> 
                             <div>
-                                <h4 class="font-bold text-slate-800">朗讀說故事考題</h4>
+                                <h4 class="font-bold text-slate-800">看圖說故事考題</h4>
                                 <span class="text-[10px] font-normal text-slate-500 block uppercase tracking-tighter italic">Storytelling Task</span>
                             </div>
                         </span>
-                        <span class="text-[11px] font-bold text-red-700 bg-white px-2 py-0.5 rounded border border-red-200">TASK 2</span>
+                        <span class="text-[11px] font-bold text-red-700 bg-white px-2 py-0.5 rounded border border-red-200 uppercase">TASK 2</span>
                     </div>
                     <div class="p-2 bg-slate-50">
                         <img src="https://res.cloudinary.com/dm1ksvptk/image/upload/v1765943677/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2_2025-12-17_114733_bbhw4r.png" 
@@ -171,7 +177,7 @@
             </div>
 
             <!-- 右側：播放器與文本 / Player & Content -->
-            <div class="space-y-8">
+            <div class="space-y-8 animate-fadeIn">
                 <!-- 播放器區塊 -->
                 <div class="bg-slate-800 p-8 rounded-[2rem] shadow-2xl text-white ring-4 ring-red-900/20">
                     <div class="flex justify-between items-center mb-6">
@@ -204,17 +210,17 @@
                 </div>
 
                 <!-- 資源連結 / Resources -->
-                <div class="flex items-center justify-center gap-8 py-4">
+                <div class="flex items-center justify-center gap-8 py-4 text-red-800">
                     <a href="https://res.cloudinary.com/dm1ksvptk/video/upload/v1766044068/%E5%A4%AA%E9%AD%AF%E9%96%A310-5-1_s0ryef.mp3" 
                        target="_blank" 
-                       class="flex flex-col items-center gap-1 text-red-700 font-bold hover:underline group transition-all">
+                       class="flex flex-col items-center gap-1 font-bold hover:underline group transition-all text-center">
                         <span class="flex items-center gap-2"><i class="fas fa-file-audio"></i> 下載太魯閣語音檔</span>
                         <span class="text-[10px] font-normal text-slate-400 group-hover:text-red-600 uppercase">Download Audio</span>
                     </a>
                     <span class="text-slate-200 text-2xl font-light">|</span>
                     <a href="https://web.klokah.tw/" 
                        target="_blank" 
-                       class="flex flex-col items-center gap-1 text-red-700 font-bold hover:underline group transition-all">
+                       class="flex flex-col items-center gap-1 font-bold hover:underline group transition-all text-center">
                         <span class="flex items-center gap-2"><i class="fas fa-external-link-alt"></i> 族語E樂園</span>
                         <span class="text-[10px] font-normal text-slate-400 group-hover:text-red-600 uppercase">E-Learning Portal</span>
                     </a>
@@ -263,5 +269,4 @@
         window.addEventListener('DOMContentLoaded', initFirebase);
     </script>
 </body>
-
 </html>
